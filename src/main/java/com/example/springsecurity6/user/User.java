@@ -19,7 +19,7 @@ import java.util.List;
 @Entity(name = "users")
 public class User implements UserDetails {
     @Id
-    @GeneratedValue // Default is AUTO
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String firstname;
     private String lastname;
